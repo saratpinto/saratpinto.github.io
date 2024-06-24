@@ -30,24 +30,26 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #35424a;
             margin-top: 0;
         }
         .project {
             margin-bottom: 2rem;
         }
-        .project-header {
+        .project-content {
             display: flex;
-            align-items: center;
             gap: 1rem;
-            margin-bottom: 1rem;
+        }
+        .project-text {
+            flex: 1;
         }
         .project-thumbnail {
-            width: 50px;
-            height: 50px;
+            width: 150px;
+            height: auto;
             object-fit: cover;
             border-radius: 5px;
+            align-self: flex-start;
         }
         .pdf-link {
             display: inline-block;
@@ -95,12 +97,14 @@
         <section id="projetos">
             <h2>Projects</h2>
             <div class="project">
-                <div class="project-header">
+                <h3>Iberian Desman Distribution Model</h3>
+                <div class="project-content">
                     <img src="toup.png" alt="Iberian Desman Distribution Model Thumbnail" class="project-thumbnail">
-                    <h3>Iberian Desman Distribution Model</h3>
+                    <div class="project-text">
+                        <p>Through this work, a distribution model of the iberian desman (Galemys pyrenaicus), a species endemic to the Iberian Peninsula and the French Pyrenees, was developed to analyze its current distribution and project the future impacts of climate change. Using historical bioclimatic data and future projections, as well as anthropogenic variables, MaxEnt software was used to model the ecological niche of the species. The results indicated that only a small part of the current habitat is suitable for the species, with future projections suggesting a further decrease in habitat suitability due to rising temperatures and changes in the summer water balance. The distribution models produced are important tools for predicting the impacts of climate change and for guiding conservation efforts, ensuring that effective measures are implemented to protect critical habitats and mitigate future threats to the survival of the iberian desman.</p>
+                        <a href="pdfs/SDM_Iberian_Desman.pdf" class="pdf-link" target="_blank">Read the document</a>
+                    </div>
                 </div>
-                <p>Through this work, a distribution model of the iberian desman (Galemys pyrenaicus), a species endemic to the Iberian Peninsula and the French Pyrenees, was developed to analyze its current distribution and project the future impacts of climate change. Using historical bioclimatic data and future projections, as well as anthropogenic variables, MaxEnt software was used to model the ecological niche of the species. The results indicated that only a small part of the current habitat is suitable for the species, with future projections suggesting a further decrease in habitat suitability due to rising temperatures and changes in the summer water balance. The distribution models produced are important tools for predicting the impacts of climate change and for guiding conservation efforts, ensuring that effective measures are implemented to protect critical habitats and mitigate future threats to the survival of the iberian desman.</p>
-                <a href="pdfs/SDM_Iberian_Desman.pdf" class="pdf-link" target="_blank">Read the document</a>
             </div>
         </section>
         <section id="contato">
