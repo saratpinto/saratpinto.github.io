@@ -35,20 +35,28 @@
             margin-top: 0;
         }
         .project {
-            margin-bottom: 1rem;
+                      display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        .project-content {
+            flex: 1;
+        .project-thumbnail {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .pdf-link {
             display: inline-block;
-            margin-top: 0.5rem;
-            padding: 0.5rem 1rem;
+            ma            padding: 0.5rem 1rem;
             background-color: #35424a;
             color: #ffffff;
             text-decoration: none;
             border-radius: 3px;
         }
         .pdf-link:hover {
-            background-color: #2c3e50;
-        }
+                   }
         .about-me {
             display: flex;
             align-items: center;
@@ -56,8 +64,7 @@
         }
         .profile-pic {
             width: 200px;
-            height: 200px;
-            border-radius: 50%;
+             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
@@ -67,8 +74,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Portfolio</h1>
+           <h1>Portfolio</h1>
     </header>
     <main>
         <section id="sobre">
@@ -76,23 +82,23 @@
             <div class="about-me">
                 <img src="pics/SP.jpg" alt="Sara Pinto" class="profile-pic">
                 <div class="about-text">
-                    <p>Hello, my name is Sara Pinto. I'm a biologist focused on geospatial data science. Below you will find some of my academic projects.</p>
-                </div>
+                    <p>Hello, my name is Sara Pinto. I'm a biologist focused on geospatial data                 </div>
             </div>
         </section>
         <section id="projetos">
             <h2>Projects</h2>
             <div class="project">
-                <h3>Iberian Desman Distribution Model</h3>
-                <p>Through this work, a distribution model of the iberian desman (Galemys pyrenaicus), a species endemic to the Iberian Peninsula and the French Pyrenees, was developed to analyze its current distribution and project the future impacts of climate change. Using historical bioclimatic data and future projections, as well as anthropogenic variables, MaxEnt software was used to model the ecological niche of the species. The results indicated that only a small part of the current habitat is suitable for the species, with future projections suggesting a further decrease in habitat suitability due to rising temperatures and changes in the summer water balance. The distribution models produced are important tools for predicting the impacts of climate change and for guiding conservation efforts, ensuring that effective measures are implemented to protect critical habitats and mitigate future threats to the survival of the iberian desman.</p>
-                <a href="pdfs/SDM_Iberian_Desman.pdf" class="pdf-link" target="_blank">Read the document</a>
+                <img src="toup.png" alt="Iberian Desman Distribution Model Thumbnail" class="project-thumbnail">
+                <div class="project-content">
+                    <h3>Iberian Desman Distribution Model</h3>
+                    <p>Through this work, a distribution model of the iberian desman (Galemys pyrenaicus), a species endemic to the Iberian Peninsula and the French Pyrenees, was developed to analyze its current distribution and project the future impacts of climate change. Using historical bioclimatic data and future projections, as well as anthropogenic variables, MaxEnt software was used to model the ecological niche of the species. The results indicated that only a small part of the current habitat is suitable for the species, with future projections suggesting a further decrease in habitat suitability due to rising temperatures and changes in the summer water balance. The distribution models produced are important tools for predicting the impacts of climate change and for guiding conservation efforts, ensuring that effective measures are implemented to protect critical habitats and mitigate future threats to the survival of the iberian                    <a href="pdfs/SDM_Iberian_Desman.pdf" class="pdf-link" target="_blank">Read the document</a>
+                </div>
             </div>
         </section>
         <section id="contato">
             <h2>Contact</h2>
             <p>Email: sarapinto.pt@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/seuperfilll">Seu Perfil</a></p>
-            <p>GitHub: <a href="https://github.com/saratpinto">Seu GitHub</a></p>
+            <p            <p>GitHub: <a href="https://github.com/saratpinto">Seu GitHub</a></p>
         </section>
     </main>
 </body>
