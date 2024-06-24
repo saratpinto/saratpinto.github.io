@@ -26,11 +26,13 @@
         section {
             background-color: #ffffff;
             margin-bottom: 2rem;
-            padding: 1rem;
+            padding: 2rem;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         h1, h2 {
             color: #35424a;
+            margin-top: 0;
         }
         .project {
             margin-bottom: 1rem;
@@ -49,14 +51,18 @@
         }
         .about-me {
             display: flex;
-            align-items: start;
-            gap: 20px;
+            align-items: center;
+            gap: 2rem;
         }
         .profile-pic {
             width: 200px;
-            height: auto;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .about-text {
+            flex: 1;
         }
     </style>
 </head>
@@ -69,7 +75,9 @@
             <h2>About me</h2>
             <div class="about-me">
                 <img src="pics/SP.jpg" alt="Sara Pinto" class="profile-pic">
-                <p>Hello, my name is Sara Pinto. I'm a biologist focused on geospatial data science. Below you will find some of my academic projects.</p>
+                <div class="about-text">
+                    <p>Hello, my name is Sara Pinto. I'm a biologist focused on geospatial data science. Below you will find some of my academic projects.</p>
+                </div>
             </div>
         </section>
         <section id="projetos">
@@ -83,7 +91,7 @@
         <section id="contato">
             <h2>Contact</h2>
             <p>Email: sarapinto.pt@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/seuperfil">Seu Perfillll</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/seuperfil">Seu Perfil</a></p>
             <p>GitHub: <a href="https://github.com/saratpinto">Seu GitHub</a></p>
         </section>
     </main>
