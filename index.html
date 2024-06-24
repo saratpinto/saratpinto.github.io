@@ -53,6 +53,9 @@
         .project-text {
             margin-bottom: 1rem;
         }
+        .project-description {
+            font-size: 0.9em; /* Tamanho da fonte reduzido */
+        }
         .pdf-link {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -66,7 +69,7 @@
         }
         .about-me {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 2rem;
         }
         .profile-pic {
@@ -76,7 +79,7 @@
             object-fit: cover;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .about-text {
+        .about-content {
             flex: 1;
         }
         .modal {
@@ -127,48 +130,44 @@
     <main>
         <section id="sobre">
             <div class="about-me">
+                <img src="pics/SP.jpg" alt="Sara Pinto" class="profile-pic">
                 <div class="about-content">
                     <h2>About me</h2>
                     <p>Hello, my name is Sara Pinto. I'm a biologist focused on geospatial data science. Below you will find some of my academic projects.</p>
                 </div>
-                <img src="pics/SP.jpg" alt="Sara Pinto" class="profile-pic">
             </div>
         </section>
         <section id="projetos">
             <h2>Projects</h2>
-        </div>
-        <div class="project">
-            <h3>Interpolation of methane emissions in a region of California</h3>
-            <div class="project-thumbnail-container">
-                <img src="interpolation.png" alt="Interpolation of methane emissions in a region of California Thumbnail" class="project-thumbnail" onclick="openModal(this.src)">
-            </div>
-            <div class="project-text">
-                <p> The objective of this work was to apply techniques and methodologies that allow interpolating methane emissions. The data used were obtained from a study conducted in California between 2016 and 2018, carried out using an unmanned aerial vehicle, and equipped with a spectrometer, which allowed to quantify the emissions of this pernicious gas into the atmosphere. 
+            <div class="project">
+                <h3>Interpolation of methane emissions in a region of California</h3>
+                <div class="project-thumbnail-container">
+                    <img src="interpolation.png" alt="Interpolation of methane emissions in a region of California Thumbnail" class="project-thumbnail" onclick="openModal(this.src)">
+                </div>
+                <div class="project-text">
+                    <p class="project-description">The objective of this work was to apply techniques and methodologies that allow interpolating methane emissions. The data used were obtained from a study conducted in California between 2016 and 2018, carried out using an unmanned aerial vehicle, and equipped with a spectrometer, which allowed to quantify the emissions of this pernicious gas into the atmosphere. 
                     The methodology was initiated through exploratory data analysis using Excel software and ArcGIS Pro, and included methodologies such as Voronoi maps and Moran statistics (Local and Global). The analysis revealed an asymmetric distribution of emissions, with many low values and some very high values, indicating a marked variability. The absence of spatial bias and global autocorrelation limited the choice of interpolation methods. In this sense, two deterministic methods were performed, IDW and Kernel, with the latter demonstrating greater precision. 
-                    Despite the challenges in accuracy due to the variability of the data and the "bull eye" effect at some isolated points, an approximate surface area of methane emissions was obtained. The existence of local anisotropy was suggested in the south of the study area, but there was no evidence of global anisotropy. The application of deterministic
-                    </p>
+                    Despite the challenges in accuracy due to the variability of the data and the "bull eye" effect at some isolated points, an approximate surface area of methane emissions was obtained. The existence of local anisotropy was suggested in the south of the study area, but there was no evidence of global anisotropy. The application of deterministic</p>
+                </div>
+                <a href="pdfs/methane_interpolation.pdf" class="pdf-link" target="_blank">Read the document</a>
             </div>
-            <a href="pdfs/methane_interpolation.pdf" class="pdf-link" target="_blank">Read the document</a>
-        </div>
-        </div>
-        <div class="project">
-            <h3>Development of a Spatial Database for Camera Trapping</h3>
-            <div class="project-thumbnail-container">
-                <img src="roe_deer.png" alt="Development of a Spatial Database for Camera Trapping Thumbnail" class="project-thumbnail" onclick="openModal(this.src)">
+            <div class="project">
+                <h3>Development of a Spatial Database for Camera Trapping</h3>
+                <div class="project-thumbnail-container">
+                    <img src="roe_deer.png" alt="Development of a Spatial Database for Camera Trapping Thumbnail" class="project-thumbnail" onclick="openModal(this.src)">
+                </div>
+                <div class="project-text">
+                    <p class="project-description">Through the integration of tools such as QGIS, PostgreSQL and PostGIS, a spatial database was developed. The main focus is on the identification of areas of high biological richness, the geographical distribution of diverse species and their habitat preferences. This method provides a detailed and valuable view for wildlife conservation, optimizing the use of data in environmental projects.</p>
+                </div>
+                <a href="pdfs/methane_interpolation.pdf" class="pdf-link" target="_blank">Read the document</a>
             </div>
-            <div class="project-text">
-                <p> Through the integration of tools such as QGIS, PostgreSQL and PostGIS, a spatial database was developed. The main focus is on the identification of areas of high biological richness, the geographical distribution of diverse species and their habitat preferences. This method provides a detailed and valuable view for wildlife conservation, optimizing the use of data in environmental projects.
-                    </p>
-            </div>
-            <a href="pdfs/methane_interpolation.pdf" class="pdf-link" target="_blank">Read the document</a>
-        </div>          
             <div class="project">
                 <h3>Iberian Desman Distribution Model</h3>
                 <div class="project-thumbnail-container">
                     <img src="toup.png" alt="Iberian Desman Distribution Model Thumbnail" class="project-thumbnail" onclick="openModal(this.src)">
                 </div>
                 <div class="project-text">
-                    <p>Through this work, a distribution model of the iberian desman (Galemys pyrenaicus), a species endemic to the Iberian Peninsula and the French Pyrenees, was developed to analyze its current distribution and project the future impacts of climate change. Using historical bioclimatic data and future projections, as well as anthropogenic variables, MaxEnt software was used to model the ecological niche of the species. The results indicated that only a small part of the current habitat is suitable for the species, with future projections suggesting a further decrease in habitat suitability due to rising temperatures and changes in the summer water balance. The distribution models produced are important tools for predicting the impacts of climate change and for guiding conservation efforts, ensuring that effective measures are implemented to protect critical habitats and mitigate future threats to the survival of the iberian desman.</p>
+                    <p class="project-description">Through this work, a distribution model of the iberian desman (Galemys pyrenaicus), a species endemic to the Iberian Peninsula and the French Pyrenees, was developed to analyze its current distribution and project the future impacts of climate change. Using historical bioclimatic data and future projections, as well as anthropogenic variables, MaxEnt software was used to model the ecological niche of the species. The results indicated that only a small part of the current habitat is suitable for the species, with future projections suggesting a further decrease in habitat suitability due to rising temperatures and changes in the summer water balance. The distribution models produced are important tools for predicting the impacts of climate change and for guiding conservation efforts, ensuring that effective measures are implemented to protect critical habitats and mitigate future threats to the survival of the iberian desman.</p>
                 </div>
                 <a href="pdfs/SDM_Iberian_Desman.pdf" class="pdf-link" target="_blank">Read the document</a>
             </div>
@@ -178,7 +177,7 @@
                     <img src="NDVI.png" alt="Comparative Analysis of the Quality of the Riparian Gallery of the Sabor River in Montesinho Natural Park Thumbnail" class="project-thumbnail" onclick="openModal(this.src)">
                 </div>
                 <div class="project-text">
-                    <p>This study focuses on the analysis of the quality of the riparian gallery of the Sabor River along three distinct stretches within the Montesinho Natural Park, using Remote Sensing techniques and using images from Sentinel-2 L2A. The Normalized Difference Vegetation Index (NDVI) was evaluated using the summer images of 2023 and 2017. The Land Use Intensification Index (LUI) was calculated using the 2017 and 2023 land use classifications. The methodology included image classification, post-processing, and calculation of index variations. The NDVI results showed a significant degradation of the riparian gallery, with a total reduction of 26.6% in quality, while 70.9% remained stable and only 2.6% showed improvement. The sectional analysis revealed that the greatest degradation occurred in the third section, highlighting an increasing gradient of deterioration along the river from the headwaters to the boundaries of the Park. The LUI indicated that 44% of the studied area suffered some type of intensification, with a greater impact also in Section 3. This study shows that the riparian gallery is going through a period of degradation and that measures should be put in place to study and mitigate the pressures on this class of soil, which is so important for the functioning of ecosystems.</p>
+                    <p class="project-description">This study focuses on the analysis of the quality of the riparian gallery of the Sabor River along three distinct stretches within the Montesinho Natural Park, using Remote Sensing techniques and using images from Sentinel-2 L2A. The Normalized Difference Vegetation Index (NDVI) was evaluated using the summer images of 2023 and 2017. The Land Use Intensification Index (LUI) was calculated using the 2017 and 2023 land use classifications. The methodology included image classification, post-processing, and calculation of index variations. The NDVI results showed a significant degradation of the riparian gallery, with a total reduction of 26.6% in quality, while 70.9% remained stable and only 2.6% showed improvement. The sectional analysis revealed that the greatest degradation occurred in the third section, highlighting an increasing gradient of deterioration along the river from the headwaters to the boundaries of the Park. The LUI indicated that 44% of the studied area suffered some type of intensification, with a greater impact also in Section 3. This study shows that the riparian gallery is going through a period of degradation and that measures should be put in place to study and mitigate the pressures on this class of soil, which is so important for the functioning of ecosystems.</p>
                 </div>
                 <a href="pdfs/RiparianGallery_Sabor.pdf" class="pdf-link" target="_blank">Read the document</a>
             </div>
