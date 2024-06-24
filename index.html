@@ -105,6 +105,19 @@
             font-weight: bold;
             cursor: pointer;
         }
+        .contact-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+            transition: opacity 0.3s ease;
+        }
+        .contact-icon:hover {
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
@@ -137,8 +150,14 @@
         <section id="contato">
             <h2>Contact</h2>
             <p>Email: sarapinto.pt@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/seuperfillllllll">Seu Perfil</a></p>
-            <p>GitHub: <a href="https://github.com/saratpinto">Seu GitHub</a></p>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/seuperfil" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" class="contact-icon">
+                </a>
+                <a href="https://github.com/saratpinto" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="contact-icon">
+                </a>
+            </div>
         </section>
     </main>
 
