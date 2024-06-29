@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <me    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
+        /* Estilos base (mobile-first) */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-fa            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -16,45 +15,36 @@
             background-color: #35424a;
             color: #ffffff;
             text-align: center;
-            padding: 1rem;
-        }
+            padd        }
         main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
+            padding: 1rem;
         }
         section {
             background-color: #ffffff;
-            margin-bottom: 2rem;
-            padding: 2rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         h1, h2, h3 {
-            color: #35424a;
-            margin-top: 0;
+                       margin-top: 0;
         }
         .project {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         .project-thumbnail-container {
-            border: 2px solid #35424a;
-            border-radius: 5px;
+                   border-radius: 5px;
             overflow: hidden;
             cursor: pointer;
             margin-bottom: 1rem;
         }
         .project-thumbnail {
             width: 100%;
-            max-height: 200px;
-            object-fit: cover;
+            max            object-fit: cover;
             display: block;
         }
-        .project-text {
-            margin-bottom: 1rem;
-        }
         .project-description {
-            font-size: 0.9em; /* Tamanho da fonte reduzido */
+            font-size: 0.9em;
         }
         .pdf-link {
             display: inline-block;
@@ -64,32 +54,65 @@
             text-decoration: none;
             border-radius: 3px;
         }
-        .pdf-link:hover {
-            background-color: #2c3e50;
-        }
         .about-me {
-            display: flex;
-            align-items: flex-start;
-            gap: 2rem;
+            display            flex-direction: column;
+            align-items: center;
         }
         .profile-pic {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 150px;
+            height: 150px;
+            border            object-fit: cover;
+            margin-bottom: 1rem;
         }
-        .about-content {
-            flex: 1;
+        .contact-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
         }
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Estilos para desktop */
+        @media screen and (min-width: 768px) {
+            main {
+                padding: 2rem;
+                max-width: 800px;
+                margin: auto;
+            }
+            section {
+                padding: 2rem;
+                 }
+            .about-me {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 2rem;
+            }
+            .profile-pic {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 0;
+            }
+            .about-content {
+                flex: 1;
+            }
+            .project-thumbnail {
+                m            }
+            .contact-icons {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Estilos do modal */
         .modal {
             display: none;
             position: fixed;
             z-index: 1000;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
+                 height: 100%;
             overflow: auto;
             background-color: rgba(0,0,0,0.9);
         }
@@ -100,26 +123,12 @@
             max-width: 700px;
         }
         .close {
-            position: absolute;
-            top: 15px;
+            po            top: 15px;
             right: 35px;
             color: #f1f1f1;
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
-        }
-        .contact-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .contact-icon {
-            width: 32px;
-            height: 32px;
-            transition: opacity 0.3s ease;
-        }
-        .contact-icon:hover {
-            opacity: 0.7;
         }
     </style>
 </head>
@@ -133,8 +142,7 @@
                 <img src="pics/SP.jpg" alt="Sara Pinto" class="profile-pic">
                 <div class="about-content">
                     <h2>About me</h2>
-                    <p>Hello, my name is Sara Pinto. I'm a biologist focused on geospatial data science. Below you will find some of my academic projects.</p>
-                </div>
+                    <p>Hello, my name is Sara Pinto. I'm a biologist focused on geospatial data science. Below you will                </div>
             </div>
         </section>
         <section id="projetos">
@@ -159,7 +167,7 @@
                 <div class="project-text">
                     <p class="project-description">Through the integration of tools such as QGIS, PostgreSQL and PostGIS, a spatial database was developed. The main focus is on the identification of areas of high biological richness, the geographical distribution of diverse species and their habitat preferences. This method provides a detailed and valuable view for wildlife conservation, optimizing the use of data in environmental projects.</p>
                 </div>
-                <a href="pdfs/methane_interpolation.pdf" class="pdf-link" target="_blank">Read the document</a>
+                <a href="pdfs/database_camera_trapping.pdf" class="pdf-link" target="_blank">Read the document</a>
             </div>
             <div class="project">
                 <h3>Iberian Desman Distribution Model</h3>
@@ -169,8 +177,7 @@
                 <div class="project-text">
                     <p class="project-description">Through this work, a distribution model of the iberian desman (Galemys pyrenaicus), a species endemic to the Iberian Peninsula and the French Pyrenees, was developed to analyze its current distribution and project the future impacts of climate change. Using historical bioclimatic data and future projections, as well as anthropogenic variables, MaxEnt software was used to model the ecological niche of the species. The results indicated that only a small part of the current habitat is suitable for the species, with future projections suggesting a further decrease in habitat suitability due to rising temperatures and changes in the summer water balance. The distribution models produced are important tools for predicting the impacts of climate change and for guiding conservation efforts, ensuring that effective measures are implemented to protect critical habitats and mitigate future threats to the survival of the iberian desman.</p>
                 </div>
-                <a href="pdfs/SDM_Iberian_Desman.pdf" class="pdf-link" target="_blank">Read the document</a>
-            </div>
+                <a href="pdfs/SDM_Iberian_Desman.pdf" class="pdf-link" target="_blank">Re            </div>
             <div class="project">
                 <h3>Comparative Analysis of the Quality of the Riparian Gallery of the Sabor River in Montesinho Natural Park</h3>
                 <div class="project-thumbnail-container">
@@ -201,8 +208,7 @@
                 </a>
                 <a href="https://github.com/saratpinto" target="_blank">
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="contact-icon">
-                </a>
-            </div>
+                          </div>
         </section>
     </main>
 
@@ -212,21 +218,18 @@
     </div>
 
     <script>
-        function openModal(imgSrc) {
-            var modal = document.getElementById("imageModal");
+        function op            var modal = document.getElementById("imageModal");
             var modalImg = document.getElementById("modalImage");
             modal.style.display = "block";
             modalImg.src = imgSrc;
-        }
-
+     
         function closeModal() {
             var modal = document.getElementById("imageModal");
             modal.style.display = "none";
         }
 
         window.onclick = function(event) {
-            var modal = document.getElementById("imageModal");
-            if (event.target == modal) {
+            var modal = document.getElementById("im            if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
