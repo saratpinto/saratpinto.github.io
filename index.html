@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <me    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <m    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
-        /* Estilos base (mobile-first) */
         body {
-            font-fa            line-height: 1.6;
-            margin: 0;
+            font-family: Arial, sans-serif;
+             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
@@ -15,33 +14,50 @@
             background-color: #35424a;
             color: #ffffff;
             text-align: center;
-            padd        }
-        main {
             padding: 1rem;
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
         }
         section {
             background-color: #ffffff;
-            margin-bottom: 1rem;
-            padding: 1rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        h1, h2, h3 {
-                       margin-top: 0;
+        h1,             color: #35424a;
+            margin-top: 0;
+        }
+        .about-me {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .profile-            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .about-content {
+            max-width: 600px;
         }
         .project {
-            margin-bottom: 1.5rem;
-        }
-        .project-thumbnail-container {
-                   border-radius: 5px;
+            margin-bottom: 2rem;
+              .project-thumbnail-container {
+            border: 2px solid #35424a;
+            border-radius: 5px;
             overflow: hidden;
             cursor: pointer;
             margin-bottom: 1rem;
         }
         .project-thumbnail {
             width: 100%;
-            max            object-fit: cover;
-            display: block;
+            max-height: 200px;
+                display: block;
         }
         .project-description {
             font-size: 0.9em;
@@ -52,18 +68,7 @@
             background-color: #35424a;
             color: #ffffff;
             text-decoration: none;
-            border-radius: 3px;
-        }
-        .about-me {
-            display            flex-direction: column;
-            align-items: center;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border            object-fit: cover;
-            margin-bottom: 1rem;
-        }
+              }
         .contact-icons {
             display: flex;
             gap: 1rem;
@@ -74,61 +79,39 @@
             width: 32px;
             height: 32px;
         }
-
-        /* Estilos para desktop */
-        @media screen and (min-width: 768px) {
-            main {
-                padding: 2rem;
-                max-width: 800px;
-                margin: auto;
-            }
-            section {
-                padding: 2rem;
-                 }
-            .about-me {
-                flex-direction: row;
-                align-items: flex-start;
-                gap: 2rem;
-            }
-            .profile-pic {
-                width: 200px;
-                height: 200px;
-                margin-bottom: 0;
-            }
-            .about-content {
-                flex: 1;
-            }
-            .project-thumbnail {
-                m            }
-            .contact-icons {
-                justify-content: flex-start;
-            }
-        }
-
-        /* Estilos do modal */
         .modal {
-            display: none;
-            position: fixed;
+            display: n            position: fixed;
             z-index: 1000;
             left: 0;
             top: 0;
-                 height: 100%;
+            width: 100%;
+            height: 100%;
             overflow: auto;
             background-color: rgba(0,0,0,0.9);
         }
         .modal-content {
             margin: auto;
             display: block;
-            width: 80%;
-            max-width: 700px;
+                      max-width: 700px;
         }
         .close {
-            po            top: 15px;
+            position: absolute;
+            top: 15px;
             right: 35px;
             color: #f1f1f1;
             font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
+                        cursor: pointer;
+        }
+        @media screen and (max-width: 768px) {
+            main {
+                padding: 0.5rem;
+            }
+            section {
+                padding: 1rem;
+            }
+            .profile-pic {
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -139,14 +122,13 @@
     <main>
         <section id="sobre">
             <div class="about-me">
-                <img src="pics/SP.jpg" alt="Sara Pinto" class="profile-pic">
-                <div class="about-content">
+                <img src="pics/SP.jpg" alt="Sara Pinto" class="profile-pic                <div class="about-content">
                     <h2>About me</h2>
-                    <p>Hello, my name is Sara Pinto. I'm a biologist focused on geospatial data science. Below you will                </div>
+                    <p>Hello, my name is Sara Pinto. I'm a biologist focused on geospatial data science. Below you will find some of my academic projects.</p>
+                </div>
             </div>
         </section>
-        <section id="projetos">
-            <h2>Projects</h2>
+        <section id="projetos">            <h2>Projects</h2>
             <div class="project">
                 <h3>Interpolation of methane emissions in a region of California</h3>
                 <div class="project-thumbnail-container">
@@ -157,8 +139,7 @@
                     The methodology was initiated through exploratory data analysis using Excel software and ArcGIS Pro, and included methodologies such as Voronoi maps and Moran statistics (Local and Global). The analysis revealed an asymmetric distribution of emissions, with many low values and some very high values, indicating a marked variability. The absence of spatial bias and global autocorrelation limited the choice of interpolation methods. In this sense, two deterministic methods were performed, IDW and Kernel, with the latter demonstrating greater precision. 
                     Despite the challenges in accuracy due to the variability of the data and the "bull eye" effect at some isolated points, an approximate surface area of methane emissions was obtained. The existence of local anisotropy was suggested in the south of the study area, but there was no evidence of global anisotropy. The application of deterministic</p>
                 </div>
-                <a href="pdfs/methane_interpolation.pdf" class="pdf-link" target="_blank">Read the document</a>
-            </div>
+                <a href="pdfs/methane_interpolation.pdf" class="pdf-link" target=            </div>
             <div class="project">
                 <h3>Development of a Spatial Database for Camera Trapping</h3>
                 <div class="project-thumbnail-container">
@@ -177,7 +158,8 @@
                 <div class="project-text">
                     <p class="project-description">Through this work, a distribution model of the iberian desman (Galemys pyrenaicus), a species endemic to the Iberian Peninsula and the French Pyrenees, was developed to analyze its current distribution and project the future impacts of climate change. Using historical bioclimatic data and future projections, as well as anthropogenic variables, MaxEnt software was used to model the ecological niche of the species. The results indicated that only a small part of the current habitat is suitable for the species, with future projections suggesting a further decrease in habitat suitability due to rising temperatures and changes in the summer water balance. The distribution models produced are important tools for predicting the impacts of climate change and for guiding conservation efforts, ensuring that effective measures are implemented to protect critical habitats and mitigate future threats to the survival of the iberian desman.</p>
                 </div>
-                <a href="pdfs/SDM_Iberian_Desman.pdf" class="pdf-link" target="_blank">Re            </div>
+                <a href="pdfs/SDM_Iberian_Desman.pdf" class="pdf-link" target="_blank">Read the document</a>
+            </div>
             <div class="project">
                 <h3>Comparative Analysis of the Quality of the Riparian Gallery of the Sabor River in Montesinho Natural Park</h3>
                 <div class="project-thumbnail-container">
@@ -207,30 +189,30 @@
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" class="contact-icon">
                 </a>
                 <a href="https://github.com/saratpinto" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="contact-icon">
-                          </div>
+                    <img src="https://cdn.jsdelivr                </a>
+            </div>
         </section>
     </main>
 
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
+        <img class="modal-content" id="    </div>
 
     <script>
-        function op            var modal = document.getElementById("imageModal");
+        function openModal(imgSrc) {
+            var modal = document.getElementById("imageModal");
             var modalImg = document.getElementById("modalImage");
-            modal.style.display = "block";
-            modalImg.src = imgSrc;
-     
+            moda            modalImg.src = imgSrc;
+        }
+
         function closeModal() {
             var modal = document.getElementById("imageModal");
             modal.style.display = "none";
         }
 
         window.onclick = function(event) {
-            var modal = document.getElementById("im            if (event.target == modal) {
-                modal.style.display = "none";
+            var modal = document.getElementById("imageModal");
+            if (                modal.style.display = "none";
             }
         }
     </script>
